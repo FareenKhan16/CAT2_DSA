@@ -1,12 +1,7 @@
-/**
- * A simple implementation of a singly linked list in Java.
- * This linked list supports insertion at the beginning, insertion at the end,
- * and deletion from the beginning.
- */
 public class LinkedList {
-    private Node head; // Head node of the linked list
+    private Node head; // Head node 
 
-    // Node class representing an element in the linked list
+    // Node class representing an element
     private class Node {
         int data;
         Node next;
@@ -18,9 +13,7 @@ public class LinkedList {
     }
 
     /**
-     * Inserts a new node at the beginning of the linked list.
-     * @param data The data to be inserted.
-     */
+     * Inserts a new node at the beginning of the linked list */
     public void insertAtBeginning(int data) {
         Node newNode = new Node(data);
         newNode.next = head;
@@ -28,9 +21,7 @@ public class LinkedList {
     }
 
     /**
-     * Inserts a new node at the end of the linked list.
-     * @param data The data to be inserted.
-     */
+     * Insert a new node at the end  */
     public void insertAtEnd(int data) {
         Node newNode = new Node(data);
         if (head == null) {
@@ -45,8 +36,7 @@ public class LinkedList {
     }
 
     /**
-     * Deletes the node at the beginning of the linked list.
-     */
+     * Delete the node at the beginning.*/
     public void deleteFromBeginning() {
         if (head != null) {
             head = head.next;
@@ -54,8 +44,7 @@ public class LinkedList {
     }
 
     /**
-     * Displays the elements of the linked list.
-     */
+     * Displays the elements  */
     public void display() {
         Node current = head;
         while (current != null) {
@@ -65,7 +54,7 @@ public class LinkedList {
         System.out.println("null");
     }
 
-    // Main method for testing the linked list implementation
+    //  testing implementation
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
 
